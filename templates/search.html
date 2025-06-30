@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewLens - Result</title>
+    <link rel="icon" href="static/icon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/search.css" />
+  </head>
+  <body>
+    <header>
+        <a href="/">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            >
+            <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
+            ></path>
+        </svg>
+        <p>ReviewLens</p>
+    </a>
+    </header>
+    <div class="best">
+      <h1>Best Brand According to reviews of the product "<span>{{product}}</span>"</h1>
+      <span
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+          />
+        </svg>
+        {{best}}</span
+      >
+    </div>
+    <div class="pieCharts">
+      {{pie1 | safe}}
+      <details val="{{brand1}}">
+        <summary class="brand">
+          <!-- <div class="brand"> -->
+            <h2><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+              {{brand1}}</h2>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin: 0 30px;
+              "
+              class="show-data"
+            >
+              <div style="display: flex; align-items: center; column-gap: 10px">
+                <p
+                  style="background-color: #ef553b; width: 20px; height: 20px"
+                  class="color-it"
+                ></p>
+                <span> Positive </span>
+                <span style="margin-left: 20px">{{positive1}}</span>
+              </div>
+              <div style="display: flex; align-items: center; column-gap: 10px">
+                <p
+                  style="background-color: #636efa; width: 20px; height: 20px"
+                  class="color-it"
+                ></p>
+                <span> Negative </span>
+                <span style="margin-left: 20px">{{negative1}}</span>
+              </div>
+              <div style="display: flex; align-items: center; column-gap: 10px">
+                <p
+                  style="background-color: #00cc96; width: 20px; height: 20px"
+                  class="color-it"
+                ></p>
+                <span> Neutral </span>
+                <span style="margin-left: 20px">{{neutral1}}</span>
+              </div>
+            </div>
+          <!-- </div> -->
+        </summary>
+
+        {{table1 | safe}}
+      </details>
+      <hr>
+      {{pie2 | safe}}
+      <details val="{{brand2}}">
+        <summary class="brand">
+          <!-- <div class="brand"> -->
+            <h2><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+              {{brand2}}</h2>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin: 0 30px;
+              "
+              class="show-data"
+            >
+              <div style="display: flex; align-items: center; column-gap: 10px">
+                <p
+                  style="background-color: #ef553b; width: 20px; height: 20px"
+                  class="color-it"
+                ></p>
+                <span> Positive </span>
+                <span style="margin-left: 20px">{{positive2}}</span>
+              </div>
+              <div style="display: flex; align-items: center; column-gap: 10px">
+                <p
+                  style="background-color: #636efa; width: 20px; height: 20px"
+                  class="color-it"
+                ></p>
+                <span> Negative </span>
+                <span style="margin-left: 20px">{{negative2}}</span>
+              </div>
+              <div style="display: flex; align-items: center; column-gap: 10px">
+                <p
+                  style="background-color: #00cc96; width: 20px; height: 20px"
+                  class="color-it"
+                ></p>
+                <span> Neutral </span>
+                <span style="margin-left: 20px">{{neutral2}}</span>
+              </div>
+            </div>
+          <!-- </div> -->
+        </summary>
+        {{table2 | safe}}
+      </details>
+
+      <hr>
+      {{pie3 | safe}}
+      <details val="{{brand3}}">
+        <summary class="brand">
+          <!-- <div class="brand"> -->
+            <h2><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+              {{brand3}}</h2>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin: 0 30px;
+              "
+              class="show-data"
+            >
+              <div style="display: flex; align-items: center; column-gap: 10px">
+                <p
+                  style="background-color: #ef553b; width: 20px; height: 20px"
+                  class="color-it"
+                ></p>
+                <span> Positive </span>
+                <span style="margin-left: 20px">{{positive3}}</span>
+              </div>
+              <div style="display: flex; align-items: center; column-gap: 10px">
+                <p
+                  style="background-color: #636efa; width: 20px; height: 20px"
+                  class="color-it"
+                ></p>
+                <span> Negative </span>
+                <span style="margin-left: 20px">{{negative3}}</span>
+              </div>
+              <div style="display: flex; align-items: center; column-gap: 10px">
+                <p
+                  style="background-color: #00cc96; width: 20px; height: 20px"
+                  class="color-it"
+                ></p>
+                <span> Neutral </span>
+                <span style="margin-left: 20px">{{neutral3}}</span>
+              </div>
+            </div>
+          <!-- </div> -->
+        </summary>
+        {{table3 | safe}}
+      </details>
+    </div>
+
+    <script src="static/search.js"></script>
+  </body>
+</html>
