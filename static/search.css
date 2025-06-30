@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; */
+  font-family: "Quicksand", serif;
+  color: white;
+}
+:root {
+    --bg-color: #161625;
+    --title-color: #86aaf9;
+    --header-svg-color: #93a2ba;
+    /* --header-bg: #2f3d5c;
+    --search-bar-bg: #232c42;
+    --inp-place: #8997a9; */
+  }
+body {
+  transition: all 0.5s;
+  user-select: none;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+}
+body::-webkit-scrollbar {
+    /* display: none; */
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: cyan;
+    border-radius: 2px;
+}
+header{
+    padding: 10px 20px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    background-color: var(--bg-color);
+    color: white;
+}
+header a{
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    text-decoration: none;
+}
+header svg{
+    height: 40px;
+}
+header p{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Quicksand", serif;
+}
+
+.best {padding-top: 100px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 50px;
+    align-items: flex-start;
+    row-gap: 30px;
+}
+.best h1{
+    font-family: "Open Sans", verdana, arial, sans-serif;;
+    font-size: 25px;
+    font-weight: 400;
+}
+.best h1 span{
+    color: var(--title-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Open Sans", verdana, arial, sans-serif;;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    border-radius: 0;
+    letter-spacing: .5px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all .4s;
+}
+.best span:hover{
+    background-color: aliceblue;
+    color: var(--bg-color);
+    svg{
+        stroke: var(--bg-color);
+    }
+}
+.best span{
+    font-family: "Open Sans", verdana, arial, sans-serif;;
+    border: 2px solid white;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    letter-spacing: .5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    text-transform: capitalize;
+    transition: all .4s;
+}
+.best span svg{
+    height: 40px;
+}
+
+.pieCharts{
+    margin: 50px 0;
+    margin-right: 30px;
+}
+
+.brand{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+summary{
+    cursor: pointer;
+    margin-left: 15px;
+    transition: background-color .4s;
+    border-radius: 8px;
+}
+summary:hover{
+    background-color: #272741;
+}
+
+hr{
+    border: none;
+    outline: none;
+    border-top: 1px solid grey;
+    margin: 40px 10px;
+}
+
+
+.brand .show-data span{
+    color: var(--bg-color);
+    font-weight: bold;
+}
+.brand .show-data div{
+    background-color: var(--header-svg-color);
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-right: 20px;
+}
+
+h2 svg{
+    height: 30px;
+    stroke: white;
+}
+h2{
+    text-transform: capitalize;
+    display: flex;
+    column-gap: 25px;
+}
+
+table{
+    transition: transform .5s;
+    border-radius: 8px;
+      background-color: #1e1e21;
+      color: white;
+      margin-top: 35px;
+      margin: 0 50px;
+      width: 95%;
+  }
+  table thead{
+      background-color: #1e1e21;
+  
+  }
+  table th{
+      padding: 10px;
+      border: 0;
+      text-align: center;
+  }
+  table td{
+    width: 10%;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+      text-align: center;
+      padding: 10px;
+      border: 0;
+      background-color: #222222;
+      color: whitesmoke;
+  }
+  
+  table td::-webkit-scrollbar {
+    width: 10px;
+  }
+  table td::-webkit-scrollbar-thumb {
+    background-color: aqua;
+    margin-bottom: 10px;
+  }
+  
+  table tr th{
+    width: 5%;
+    text-transform: uppercase;
+  }
+  table tr{
+    display: flex;
+    height: 50px;
+  }
+  table tr:has(td){
+    height: 100px;
+  }
+  table tr td:last-child{
+    width: 74%;
+  }
+  thead tr th{
+    width: 10%;
+  }
+  thead tr th:first-child{
+    width: 5%;
+  }
+
+
+@media (max-width:600px) {
+    .brand{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    .brand div{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    table thead tr{
+        display:contents;
+    }
+    table thead tr{
+        display:table row;
+    }
+    body::-webkit-scrollbar {
+        display: none;
+    }
+}
